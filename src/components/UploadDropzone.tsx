@@ -85,8 +85,8 @@ const UploadDropzone = () => {
               <div className="flex flex-col items-center justify-center pt-5 pb-6">
                 <CloudIcon className="w-6 h-6 text-zinc-500 mb-2" />
                 <p className="mb-2 text-sm text-zinc-700">
-                  <span className="font-semibold">Click to upload</span> or
-                  drag and drop
+                  <span className="font-semibold">Click to upload</span> or drag
+                  and drop
                 </p>
                 <p className="text-xs text-zinc-500">PDF (up to 4MB)</p>
               </div>
@@ -106,15 +106,14 @@ const UploadDropzone = () => {
                 <div className="w-full mt-4 max-w-xs mx-auto">
                   <Progress
                     indicatorColor={
-                      uploadProgress === 100?
-                      'bg-green-500' : ''
+                      uploadProgress === 100 ? "bg-green-500" : ""
                     }
                     value={uploadProgress}
                     className="h-1 w-full bg-zinc-200"
                   />
-                  {uploadProgress === 100? (
+                  {uploadProgress === 100 ? (
                     <div className="flex gap-1 items-center justify-center text-sm text-zinc-700 text-center pt-2">
-                      <Loader2 className="h-3 w-3 animate-spin"/>
+                      <Loader2 className="h-3 w-3 animate-spin" />
                       Redirecting...
                     </div>
                   ) : null}
