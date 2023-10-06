@@ -1,12 +1,14 @@
 "use client";
+
 import { CloudIcon, File, Loader2 } from "lucide-react";
 import React, { useState } from "react";
+
 import Dropzone from "react-dropzone";
 import { Progress } from "./ui/progress";
-import { useUploadThing } from "@/lib/uploadThing";
-import { useToast } from "./ui/use-toast";
 import { trpc } from "@/app/_trpc/client";
 import { useRouter } from "next/navigation";
+import { useToast } from "./ui/use-toast";
+import { useUploadThing } from "@/lib/uploadThing";
 
 const UploadDropzone = () => {
   const router = useRouter();

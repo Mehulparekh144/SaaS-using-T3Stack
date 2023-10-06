@@ -1,4 +1,8 @@
 "use client";
+
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+
 import {
   ChevronDown,
   ChevronUp,
@@ -6,26 +10,25 @@ import {
   RotateCw,
   Search,
 } from "lucide-react";
-import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/Page/AnnotationLayer.css";
-import "react-pdf/dist/Page/TextLayer.css";
-import { useToast } from "./ui/use-toast";
-import { useResizeDetector } from "react-resize-detector";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { useForm } from "react-hook-form";
-import z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import SimpleBar from "simplebar-react";
+import React, { useState } from "react";
+
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 import PdfFullScreen from "./PdfFullScreen";
+import SimpleBar from "simplebar-react";
+import { cn } from "@/lib/utils";
+import { useForm } from "react-hook-form";
+import { useResizeDetector } from "react-resize-detector";
+import { useToast } from "./ui/use-toast";
+import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`; //PDF Render worker function
 
